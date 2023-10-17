@@ -1,0 +1,22 @@
+.home-image{
+    background: url('../assests/Projects.png') no-repeat ;  
+    width: 100vw;
+    height: 60vh;
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    text-align: center;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+.home-image .centered{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:#fff;
+    font-weight: 600;
+   
+}

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.quote-blue {
+  color: blue;
+}
+h2{
+  margin-top: 2px;
+  place-items: left;
+}
+.h21a{
+color: #fff;
+    position: relative;
+  bottom: -70px;
+    left: 20px; 
+}
+.testimonial-bg{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  width:100%;
+  padding-top:100px;
+}
+.pa{
+  color: #858383;
+font-size: 14px;
+
+font-weight: 600;
+}
+.back-image{
+  background-image: url('../assests/image1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:300px;
+ 
+}
+
+@media (max-width: 767px) {
+  
+}
+::selection{
+  background: rgba(23,162,184,0.3);
+}
+.wrapper{
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
+.wrapper .box{
+  background: #fff;
+  width: calc(30% - 10px);
+  padding: 25px;
+  border-radius: 3px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+  
+}
+.wrapper .box i.quote{
+  font-size: 20px;
+  color: #17a2b8;
+}
+.wrapper .box .content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.box .info .name{
+  font-weight: 600;
+  font-size: 24px;
+}
+.box .info .job{
+  font-size: 16px;
+  font-weight: 500;
+  color: #17a2b8;
+}
+.box .info .stars{
+  margin-top: 2px;
+}
+.box .info .stars i{
+  color: #17a2b8;
+}
+.box .content .right{
+  height: 75px;
+  width: 75px;
+  padding: 3px;
+  
+ 
+}
+
+
+@media (max-width: 1045px) {
+  .wrapper .box{
+    width: calc(50% - 10px);
+    margin: 10px 0;
+  }
+}
+@media (max-width: 702px) {
+  .wrapper .box{
+    width: 100%;
+  }
+}
+.star-filled {
+  color:#FCD53F;
+}
+/*
+@media (max-width: 767px) {
+  body {
+    background-size:auto; 
+    width:100vw;/* Adjust background size for smaller screens 
+  }
+}*/

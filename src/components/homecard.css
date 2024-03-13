@@ -1,0 +1,20 @@
+@media screen and (min-width: 1200px) {
+.contain{
+    margin-top:300px;
+}
+.img{
+    width:100%;
+}
+.contain{
+    margin-bottom:100px;
+}
+}
+@media screen and (max-width: 1200px) {
+    .contain{
+        margin-top:1050px;
+    }
+    .img{
+        width: 360px;
+        padding:10px;
+    }
+}

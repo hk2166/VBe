@@ -1,0 +1,51 @@
+.CardBody{
+   
+    background: #049E79;
+    color:white;
+    font-size: 14px;
+    padding-bottom: 30px;
+}
+.column1{
+    padding:20px 8px 8px 10px;
+    
+}
+.links1{
+    padding:8px 8px 8px 10px;
+}
+.column2{
+    padding-top:70px;
+    
+}
+.links2{
+    padding:20px 8px 8px 0px;
+}
+.size3{
+    font-size: 18px;
+}
+.topp{
+    padding-top: 10px;
+}
+.topr{
+    padding-right: 10px;
+}
+.text-center{
+    padding: 5px;
+    border-top: 2px solid #fff;
+    background: #049E79;
+    color:white;
+    font-weight: 600;
+    font-size: 16px;
+}
+@media screen and  (max-width :860px){
+.CardBody{
+    padding-bottom: 0px;
+    font-size: 15px;
+}
+.column2{
+    padding-top:40px;
+    
+}
+.size3{
+    font-size: 16px;
+}
+}

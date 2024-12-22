@@ -1,0 +1,29 @@
+.h2{
+    padding:10px;
+    color:#575757;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.Col{
+    padding: 22px;
+}
+.Row{
+    margin-bottom: 100px;
+}
+.Cards{
+    width: 22rem;
+}
+.title1{
+    color:#575757;
+    font-size: 24px;
+    font-weight:600
+}
+.text{
+    color:#858383;
+    font-size: 16px;
+    font-weight:600
+}
+.butto1{
+    text-align:center;
+}

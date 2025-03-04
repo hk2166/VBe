@@ -23,7 +23,8 @@ const SEOHelmet = () => (
     <link rel="canonical" href="https://www.vbsafetynets.in" />
 
     {/* Social Media Links */}
-    <link rel="alternate" href="https://www.instagram.com/vbenterprises_" type="application/rss+xml" title="Instagram" />
+    /*<link rel="alternate" href="https://www.instagram.com/vbenterprises_" type="application/rss+xml" title="Instagram" />*/
+    <link rel="alternate" href="https://www.instagram.com/vbenterprises_?igsh=MW9tbmVkMGhsNmIxYw==" type="application/rss+xml" title="Instagram" />
     <link rel="alternate" href="https://www.linkedin.com/company/vbenterprises/" type="application/rss+xml" title="LinkedIn" />
     <link rel="alternate" href="https://www.facebook.com/profile.php?id=61565076555634" type="application/rss+xml" title="Facebook" />
   </Helmet>

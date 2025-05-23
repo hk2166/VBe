@@ -33,10 +33,10 @@ A React-based single-page application (SPA) for **VB Enterprises**, offering pre
 
 ## Demo
 
-> *Link to live demo (replace with your URL)*
+> [Link to live demo](vb-enterprise.vercel.app)*
 
 ```text
-https://www.vbsafetynets.in
+vb-enterprise.vercel.app
 ```
 
 ---

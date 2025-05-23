@@ -1,3 +1,5 @@
+![VB Enterprises Website](./LandingPage.png)
+
 # VB Enterprises Website
 
 A React-based single-page application (SPA) for **VB Enterprises**, offering premium safety nets for residential, commercial, and industrial purposes. This repository contains the source code for the company website, showcasing home, about, services, projects pages, and optimized for SEO and performance.

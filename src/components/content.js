@@ -323,6 +323,13 @@ function TabsExample() {
           lg={{ span: 3, order: "first" }}
           sm={{ span: 12, order: "last" }}
         >
+            <Button
+              variant="outline-primary"
+              className="mb-3 d-md-none"
+              onClick={toggleList}
+            >
+              Toggle Services List
+            </Button>
           <ListGroup
             as="ul"
             id="listGroupDropdowns"

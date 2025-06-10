@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col";
 import Nav from 'react-bootstrap/Nav';
 import Image from 'react-bootstrap/Image';
 import logo1 from '../assests/vb-logo-1.png';
-import twitter from '../assests/twitter.png';
+import LinkedIn from '../assests/linkedin.png';
 import facebook from '../assests/facebook.png';
 import instagram from '../assests/instagram.png';
 import email from "../assests/email.png";
@@ -44,7 +44,7 @@ function HeaderAndFooterExample() {
         </Col>
          <Col lg={3} md={6} sm={12}  className='column2'>
          <h5 className='size3' >SOCIAL MEDIA</h5>
-       <div class='topp'>  <a href="https://www.facebook.com/profile.php?id=61565076555634&sk=about"><img  src={facebook} alt='facebook-link' ></img></a><a href="https://www.linkedin.com/company/vbenterprises/"><img  src={twitter} alt='twitter-icon' ></img></a><a href="https://www.instagram.com/vbenterprises_?igsh=MW9tbmVkMGhsNmIxYw==" ><img  src={instagram} alt='instagram-icon'></img></a></div>
+       <div class='topp'>  <a href="https://www.facebook.com/profile.php?id=61565076555634&sk=about"><img  src={facebook} alt='facebook-link' ></img></a><a href="https://www.linkedin.com/company/vbenterprises/"><img className='link'  src={LinkedIn} alt='twitter-icon' ></img></a><a href="https://www.instagram.com/vbenterprises_?igsh=MW9tbmVkMGhsNmIxYw==" ><img  src={instagram} alt='instagram-icon'></img></a></div>
          </Col>
       </Row>
       </Container>

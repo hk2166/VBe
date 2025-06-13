@@ -30,6 +30,7 @@ import image34 from "../assests/image34.jpg";
 import image35 from "../assests/image35.jpg";
 import image36 from "../assests/image36.jpg";
 import image37 from "../assests/image37.jpg";
+import { useLocation } from 'react-router-dom';
 
 const services = [
   {
@@ -155,18 +156,22 @@ const services = [
 ];
 
 function BasicExample() {
+  const location = useLocation();
+  const isServicesPage = location.pathname === '/services';
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
       offset: 100,
     });
   }, []);
+
   return (
     <>
     <Container >
       <h2 className='h2' data-aos="fade-right" > Our Services</h2>
         <Row  data-aos="fade-up" >
-          {services.map((service, idx) => (
+          {(isServicesPage ? services : services.slice(0, 10)).map((service, idx) => (
             <Col key={service.title} lg={4} md={6} sm={12} xs={12} className='py-4'>
               <Card className='Cards' style={{"borderRadius":"10px"}}>
                 <Card.Img variant="top" src={service.img} height={200} alt='cards images'/>
@@ -195,7 +200,14 @@ function BasicExample() {
             </Col>
           ))}
         </Row>
-      <Button1/>
+        {!isServicesPage && (
+          <Row className="justify-content-center mt-4">
+            <Col xs="auto">
+              <Button variant="primary" href="/services" style={{backgroundColor:"#0094FF",borderRadius:"10px"}}>View All</Button>
+            </Col>
+          </Row>
+        )}
+        <Button1/>
     </Container>
     </>
   );

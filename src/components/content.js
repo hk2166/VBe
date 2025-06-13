@@ -317,15 +317,28 @@ function TabsExample() {
   };
 
   useEffect(() => {
-    const hash = window.location.hash;
-    if (hash && hashToButtonKey[hash]) {
-      setJsonData(dataMappings[hashToButtonKey[hash]]);
-      // Optionally scroll to the anchor
-      setTimeout(() => {
-        const el = document.getElementById(hash.replace('#', ''));
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    }
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash && hashToButtonKey[hash]) {
+        setJsonData(dataMappings[hashToButtonKey[hash]]);
+        // Optionally scroll to the anchor
+        setTimeout(() => {
+          const el = document.getElementById(hash.replace('#', ''));
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    };
+
+    // Initial check on page load
+    handleHashChange();
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+
+    // Cleanup listener on component unmount
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
   }, []);
 
   const [jsonData, setJsonData] = useState(dataMappings.button1);

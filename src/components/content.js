@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./conten.css";
 import correct from "../assests/correct.png";
 import image01 from "../assests/image01.png";
@@ -27,6 +27,7 @@ import image35 from "../assests/image35.jpg";
 import image36 from "../assests/image36.jpg";
 import image37 from "../assests/image37.jpg";
 import image38 from "../assests/image38.jpeg";
+
 function TabsExample() {
   const dataMappings = {
     button1: {
@@ -290,6 +291,43 @@ function TabsExample() {
       col4: "Customizable: Tailored solutions to fit the specific needs and dimensions of different spaces",
     },
   };
+
+  // Map hash to button key
+  const hashToButtonKey = {
+    "#bird-spikes": "button1",
+    "#pigeon-safety-nets": "button2",
+    "#children-safety-nets": "button3",
+    "#anti-bird-nets": "button4",
+    "#duct-area-safety-nets": "button5",
+    "#construction-safety-nets": "button6",
+    "#industrial-safety-nets": "button7",
+    "#coconut-safety-nets": "button8",
+    "#pets-safety-nets": "button9",
+    "#balcony-safety-nets": "button10",
+    "#swimming-pool-safety-nets": "button11",
+    "#shade-nets": "button12",
+    "#all-sports-nets": "button13",
+    "#cricket-practice-nets": "button14",
+    "#artificial-grass": "button15",
+    "#mosquito-nets": "button16",
+    "#turf-for-cricket-pitch": "button17",
+    "#glass-safety-nets": "button18",
+    "#monkey-saftey-nets": "button19",
+    "#pigeon-net-for-balcony": "button20",
+  };
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash && hashToButtonKey[hash]) {
+      setJsonData(dataMappings[hashToButtonKey[hash]]);
+      // Optionally scroll to the anchor
+      setTimeout(() => {
+        const el = document.getElementById(hash.replace('#', ''));
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }, []);
+
   const [jsonData, setJsonData] = useState(dataMappings.button1);
   const [sidebar, setSideBar] = useState(false);
 
@@ -668,7 +706,31 @@ function TabsExample() {
           </div>
         )}
         <Col xs={12} md={9} lg={9} sm={12}>
-          <h5 className="heading2" style={{ "margin-top": "10px" }}>
+          <h5 className="heading2" style={{ "margin-top": "10px" }}
+            id={
+              name === "Bird Spikes" ? "bird-spikes" :
+              name === "Pegion Safety Nets" ? "pigeon-safety-nets" :
+              name === "Children Safety Nets" ? "children-safety-nets" :
+              name === "Anti Bird Nets" ? "anti-bird-nets" :
+              name === "Duct Area Safety Nets" ? "duct-area-safety-nets" :
+              name === "Construction Safety Nets" ? "construction-safety-nets" :
+              name === "Industrial Safety Nets" ? "industrial-safety-nets" :
+              name === "Coconut Safety Nets" ? "coconut-safety-nets" :
+              name === "Pets Safety Nets" ? "pets-safety-nets" :
+              name === "Balcony Safety Nets" ? "balcony-safety-nets" :
+              name === "Swimming pool Safety Nets" ? "swimming-pool-safety-nets" :
+              name === "Shade Nets" ? "shade-nets" :
+              name === "All Sports Nets" ? "all-sports-nets" :
+              name === "Cricket Practice Nets" ? "cricket-practice-nets" :
+              name === "Artificial Grass" ? "artificial-grass" :
+              name === "Mosquito Nets" ? "mosquito-nets" :
+              name === "Turf For Cricket Pitch" ? "turf-for-cricket-pitch" :
+              name === "Glass Safety Nets" ? "glass-safety-nets" :
+              name === "Monkey Saftey Nets" ? "monkey-saftey-nets" :
+              name === "Pegion Net for Balcony" ? "pigeon-net-for-balcony" :
+              undefined
+            }
+          >
             {name}
           </h5>
           <Row>

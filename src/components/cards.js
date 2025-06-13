@@ -200,13 +200,6 @@ function BasicExample() {
             </Col>
           ))}
         </Row>
-        {!isServicesPage && (
-          <Row className="justify-content-center mt-4">
-            <Col xs="auto">
-              <Button variant="primary" href="/services" style={{backgroundColor:"#0094FF",borderRadius:"10px"}}>View All</Button>
-            </Col>
-          </Row>
-        )}
         <Button1/>
     </Container>
     </>
